@@ -1,6 +1,6 @@
 # atos_inhouse_day
 create Atos inhouse day folder
-$ mkdir atos_inhouse_day
+''$ mkdir atos_inhouse_day''
 $ cd atos_inhouse_day
 
 create virtual environment
