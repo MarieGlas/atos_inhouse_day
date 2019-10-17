@@ -1,4 +1,4 @@
-create Atos inhouse day folder
+create Atos inhouse day folder\
 `$ mkdir atos_inhouse_day`
 `$ cd atos_inhouse_day`
 
