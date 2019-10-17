@@ -1,4 +1,4 @@
-# Atos InHouseDay Spacy Workshop
+# Atos In House Day "Spacy" Workshop
 1. Create Atos inhouse day folder\
 `$ mkdir atos_inhouse_day`\
 2. Open the folder \
