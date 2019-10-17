@@ -47,11 +47,12 @@ def atos_inhouse(request):
     #         verbs_list.append(token)
     #
     # # append all noun chunks from text to list
-    #
+    # # HINT: https://spacy.io/usage/linguistic-features#noun-chunks
     # for chunk in doc<fil in>:
     #     noun_phrases_list.append(chunk.text)
     #
     # # append all entity text & labels from  doc to list
+    # # HINT FEATURES: https://spacy.io/
     # for entity in doc<fill in>:
     #     entitylist = (entity<fill in>, entity.<fill in>)
     #     entity_txt_lbl_list.append(entitylist)
