@@ -1,3 +1,6 @@
+@font-face { font-family: stag-light; src: url('../fonts/Stag-Light.woff'); }
+@font-face { font-family: stag-medium; src: url('../fonts/Stag-Medium.woff'); }
+@font-face { font-family: stag-book; src: url('../fonts/StagSans-Book.woff'); }
 
 .cloud {
     display: inline;
@@ -9,16 +12,19 @@
     list-style: none;
     display: inline;
     color: orange;
+    font-family: stag-book;
 }
 
 
 .cloud li:nth-of-type(3n + 2) {
     font-size: 1.25em;
     color: #5cbdbb;
+
 }
 .cloud li:nth-of-type(1n+3) {
     font-size: 1.5em;
     color: pink;
+
 }
 .cloud li:nth-of-type(5n - 3) {
     font-size: 1em;
@@ -28,4 +34,23 @@
 .cloud li:nth-of-type(2n - 3) {
     font-size: 1em;
     color: #2FFF02;
+}
+
+.display-4 {
+
+font-family: stag-medium;
+
+}
+
+.lead {
+font-family: stag-light;
+}
+
+.contextdata{
+
+font-family: stag-book;
+}
+
+.nav-item{
+color: black;
 }

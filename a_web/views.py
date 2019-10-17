@@ -6,12 +6,12 @@ def atos_inhouse(request):
     nlp = spacy.load("en_core_web_sm")
     text = ("Atos’ history spans a century, from Fredrik Rosing Bull first creating the tabulating machine to Europe’s"
             "number one digital services provider."
-            "Every day our 110,000 people in 73 countries are developing and implementing innovative digital solutions"
+            " Every day our 110,000 people in 73 countries are developing and implementing innovative digital solutions"
             "that support the business transformation"
             "of clients and address the environmental and social challenges we all face."
-            "Atos is the Worldwide Information Technology Partner for the Olympic & Paralympic Games and operates under"
-            "the brands Atos, Atos Syntel, and Unify. Atos is a SE (Societas Europaea),"
-            "listed on the CAC40 Paris stock index")
+            " Atos is the Worldwide Information Technology Partner for the Olympic & Paralympic Games and operates under"
+            " the brands Atos, Atos Syntel, and Unify. Atos is a SE (Societas Europaea),"
+            " listed on the CAC40 Paris stock index")
     doc = nlp(text)
     stopwords_list = []
     token_list = []
@@ -45,8 +45,8 @@ def atos_inhouse(request):
         entitylist = (entity.text, entity.label_)
         entity_txt_lbl_list.append(entitylist)
 
-
     context = {
+        'text' : doc,
         'sentence_list': sentence_list,
         'token_list': token_list,
         'stopwords_list': stopwords_list,

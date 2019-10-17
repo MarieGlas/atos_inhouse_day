@@ -4,6 +4,14 @@
 
 <div class="container">
 
+      <div class="jumbotron">
+        <h1 class="display-4">Text</h1>
+        <p class="lead">Atos About us text: https://atos.net/en/about-us/company-profile</p>
+        <hr class="my-4">
+
+          {{ text }}
+    </div>
+
     <div class="jumbotron">
         <h1 class="display-4">Sentences</h1>
         <p class="lead">Finding and segmenting individual sentences.</p>
@@ -14,7 +22,7 @@
                 <th scope="col"></th>
             </tr>
             </thead>
-            <tbody>
+            <tbody class="contextdata">
 
             {% for sentence in sentence_list %}
             <tr>
@@ -35,7 +43,7 @@
         <h1 class="display-4">Tokens</h1>
         <p class="lead">An individual token — i.e. a word, punctuation symbol, whitespace, etc.</p>
         <hr class="my-4">
-        <p> {% for token in token_list %}
+        <p class="contextdata"> {% for token in token_list %}
             <span class="border border-primary">{{ token }}</span>
             {% endfor %}.</p>
     </div>
@@ -47,12 +55,12 @@
         <p class="lead">List of most common words of a language that are often useful to filter out,
             for example “and” or “I”. Matching tokens will return True for is_stop.</p>
         <hr class="my-4">
-        <ul class="cloud">
+        <p class="contextdata">
             {% for stopword in stopwords_list %}
-            <li><span class="border border-primary">{{ stopword }}</span></li>
+            <span class="border border-primary">{{ stopword }}</span>
 
             {% endfor %}
-        </ul>
+        </p>
     </div>
 
 
@@ -111,7 +119,7 @@
 
 
     <div class="jumbotron">
-        <h1 class="display-4">Entit Text & label</h1>
+        <h1 class="display-4">Entity Text & label</h1>
         <p class="lead">After tokenization, spaCy can parse and tag a given Doc. This is where the statistical model comes in,
             which enables spaCy to make a prediction of which tag or label most likely applies in this context..</p>
         <hr class="my-4">
@@ -121,7 +129,7 @@
                 <th scope="col"></th>
             </tr>
             </thead>
-            <tbody>
+            <tbody class="contextdata">
 
             {% for entity_txt_lbl in entity_txt_lbl_list %}
             <tr>
