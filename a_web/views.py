@@ -1,7 +1,5 @@
 from django.shortcuts import render
 import spacy
-import en_core_web_sm
-
 
 
 def atos_inhouse(request):
@@ -21,8 +19,7 @@ def atos_inhouse(request):
     non_stopwords_list = []
     noun_phrases_list = []
     verbs_list = []
-    entitylabel_list = []
-    entitytext_list = []
+    entity_txt_lbl_list = []
     template = 'a_web/atosday.html'
 
     sentences = list(doc.sents)
@@ -45,18 +42,9 @@ def atos_inhouse(request):
 
     # Find named entities, phrases and concepts
     for entity in doc.ents:
-        entitytext_list.append(entity.text)
-        entitylabel_list.append(entity.label_)
+        entitylist = (entity.text, entity.label_)
+        entity_txt_lbl_list.append(entitylist)
 
-    # Analyze syntax
-    # print("Noun phrases:", noun_phrases_list)
-    # print("Verbs:", verbs_list)
-    # print("stop words", stopwords_list)
-    # print("tokens", token_list)
-    # print("non stop words", non_stopwords_list)
-    # print("sentence", sentence_list)
-    # print("entitytext",entitytext_list)
-    # print("entitylabel", entitylabel_list)
 
     context = {
         'sentence_list': sentence_list,
@@ -65,10 +53,7 @@ def atos_inhouse(request):
         'nonstopwords_list': non_stopwords_list,
         'verbs_list': verbs_list,
         'nounphrases_list': noun_phrases_list,
-        'entitylabel_list': entitylabel_list,
-        'entitytext_list': entitytext_list
-
-
+        'entity_txt_lbl_list':  entity_txt_lbl_list
     }
 
     return render(request, 'a_web/atosday.html', context)

@@ -1,4 +1,3 @@
-$$
 create Atos inhouse day folder
 $ mkdir atos_inhouse_day
 $ cd atos_inhouse_day
@@ -44,4 +43,3 @@ open in your code editor the folder atos_inhouse_day
 under views.py  you find missing code, try to complete them. 
 After finishing open the url again: 
 http://127.0.0.1:8000
-$$

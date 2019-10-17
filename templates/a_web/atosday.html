@@ -5,141 +5,134 @@
 <div class="container">
 
     <div class="jumbotron">
-  <h1 class="display-4">Sentences</h1>
-  <p class="lead">Finding and segmenting individual sentences.</p>
-  <hr class="my-4">
-    <table class="table table-striped custab">
-  <thead>
-    <tr>
-      <th scope="col"></th>
-    </tr>
-  </thead>
-  <tbody>
+        <h1 class="display-4">Sentences</h1>
+        <p class="lead">Finding and segmenting individual sentences.</p>
+        <hr class="my-4">
+        <table class="table table-striped custab">
+            <thead>
+            <tr>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
 
-  {% for sentence in sentence_list %}
-    <tr>
-      <th scope="row"> {{ sentence }}</th>
+            {% for sentence in sentence_list %}
+            <tr>
+                <th scope="row"> {{ sentence }}</th>
 
-    </tr>
-   {% endfor %}
-
-
-  </tbody>
-</table>
-</div>
+            </tr>
+            {% endfor %}
 
 
-
-
-<div class="jumbotron">
-  <h1 class="display-4">Tokens</h1>
-  <p class="lead">An individual token — i.e. a word, punctuation symbol, whitespace, etc.</p>
-  <hr class="my-4">
-  <p> {% for token in token_list %}
-<span class="border border-primary">{{ token }}</span>
- {% endfor %}.</p>
-</div>
+            </tbody>
+        </table>
+    </div>
 
 
 
-<div class="jumbotron">
-  <h1 class="display-4">Stopwords</h1>
-  <p class="lead">List of most common words of a language that are often useful to filter out,
-      for example “and” or “I”. Matching tokens will return True for is_stop.</p>
-  <hr class="my-4">
- <ul class="cloud">
-        {% for stopword in stopwords_list %}
-        <li><span class="border border-primary">{{ stopword }}</span></li>
-
-        {% endfor %}
-    </ul>
-</div>
-
-
-
-
-<div class="jumbotron">
-  <h1 class="display-4">Non stopwords</h1>
-  <p class="lead">List of words without stopwords.</p>
-  <hr class="my-4">
- <ul class="cloud">
-        {% for nonstopword in nonstopwords_list %}
-        <li>{{ nonstopword }}</li>
-
-        {% endfor %}
-    </ul>
-</div>
 
     <div class="jumbotron">
-  <h1 class="display-4">Verbs</h1>
-  <p class="lead">Verbs from text.</p>
-  <hr class="my-4">
- <ul class="cloud">
-        {% for verb in verbs_list %}
-        <li>{{ verb }}</li>
-
-        {% endfor %}
-    </ul>
-</div>
-
-
-       <div class="jumbotron">
-  <h1 class="display-4">Noun Phrases</h1>
-  <p class="lead">Noun chunks are “base noun phrases” – flat phrases that have a noun as their head.
-      You can think of noun chunks as a noun plus the words describing the noun – for example,
-      “the lavish green grass” or “the world’s largest tech fund”..</p>
-  <hr class="my-4">
-    <table class="table table-striped custab">
-  <thead>
-    <tr>
-      <th scope="col"></th>
-    </tr>
-  </thead>
-  <tbody>
-
-  {% for nounphrase in nounphrases_list %}
-    <tr>
-      <th scope="row">{{ nounphrase }}</th>
-
-    </tr>
-   {% endfor %}
-
-
-  </tbody>
-</table>
-</div>
-
-
-   <div class="jumbotron">
-  <h1 class="display-4">Sentences</h1>
-  <p class="lead">Finding and segmenting individual sentences.</p>
-  <hr class="my-4">
-    <table class="table table-striped custab">
-  <thead>
-    <tr>
-      <th scope="col"></th>
-    </tr>
-  </thead>
-  <tbody>
+        <h1 class="display-4">Tokens</h1>
+        <p class="lead">An individual token — i.e. a word, punctuation symbol, whitespace, etc.</p>
+        <hr class="my-4">
+        <p> {% for token in token_list %}
+            <span class="border border-primary">{{ token }}</span>
+            {% endfor %}.</p>
+    </div>
 
 
 
-    <tr>
-        {% for text in entitytext_list  %}
-      <th scope="row"> {{ text }}</th>
-        {% endfor %}
-        {% for label in entitylabel_list %}
-         <th scope="row"> {{ label }}</th>
-        {% endfor %}
+    <div class="jumbotron">
+        <h1 class="display-4">Stopwords</h1>
+        <p class="lead">List of most common words of a language that are often useful to filter out,
+            for example “and” or “I”. Matching tokens will return True for is_stop.</p>
+        <hr class="my-4">
+        <ul class="cloud">
+            {% for stopword in stopwords_list %}
+            <li><span class="border border-primary">{{ stopword }}</span></li>
 
-    </tr>
+            {% endfor %}
+        </ul>
+    </div>
 
 
 
 
-  </tbody>
-</table>
-</div>
+    <div class="jumbotron">
+        <h1 class="display-4">Non stopwords</h1>
+        <p class="lead">List of words without stopwords.</p>
+        <hr class="my-4">
+        <ul class="cloud">
+            {% for nonstopword in nonstopwords_list %}
+            <li>{{ nonstopword }}</li>
+
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="jumbotron">
+        <h1 class="display-4">Verbs</h1>
+        <p class="lead">Verbs from text.</p>
+        <hr class="my-4">
+        <ul class="cloud">
+            {% for verb in verbs_list %}
+            <li>{{ verb }}</li>
+
+            {% endfor %}
+        </ul>
+    </div>
+
+
+    <div class="jumbotron">
+        <h1 class="display-4">Noun Phrases</h1>
+        <p class="lead">Noun chunks are “base noun phrases” – flat phrases that have a noun as their head.
+            You can think of noun chunks as a noun plus the words describing the noun – for example,
+            “the lavish green grass” or “the world’s largest tech fund”..</p>
+        <hr class="my-4">
+        <table class="table table-striped custab">
+            <thead>
+            <tr>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+
+            {% for nounphrase in nounphrases_list %}
+            <tr>
+                <th scope="row">{{ nounphrase }}</th>
+
+            </tr>
+            {% endfor %}
+
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="jumbotron">
+        <h1 class="display-4">Entit Text & label</h1>
+        <p class="lead">After tokenization, spaCy can parse and tag a given Doc. This is where the statistical model comes in,
+            which enables spaCy to make a prediction of which tag or label most likely applies in this context..</p>
+        <hr class="my-4">
+        <table class="table table-striped custab">
+            <thead>
+            <tr>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+
+            {% for entity_txt_lbl in entity_txt_lbl_list %}
+            <tr>
+                <th scope="row"> {{ entity_txt_lbl  }}</th>
+
+            </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
 </div>
 
 
