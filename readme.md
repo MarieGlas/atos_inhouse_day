@@ -41,11 +41,10 @@ https://spacy.io/
 `python manage.py runserver`
 
 11. Open in your browser:\
-[DJANGO SERVER](http://127.0.0.1:8000)\
-The Django server is running
+The URL where the Django server is running (127.0.0.1)\
 
 12. Open in your code editor the folder\
 `atos_inhouse_day`
 13. Open `a_web/views.py`  you find missing code, try to complete them.\
-After finishing open the url again: \
-http://127.0.0.1:8000
+After finishing open again: \
+The URL where the Django server is running (127.0.0.1)
