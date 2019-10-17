@@ -4,8 +4,8 @@
 2. Open the folder \
 `$ cd atos_inhouse_day`
 
-3. Clone this git repository
-https://github.com/MarieGlas/atos_inhouse_day.git
+3. Clone or Download this git repository
+https://github.com/MarieGlas/atos_inhouse_day.git 
 
 4. Create virtual environment\
 `$ python3 -m venv myvenv`
