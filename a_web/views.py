@@ -22,38 +22,51 @@ def atos_inhouse(request):
     entity_txt_lbl_list = []
     template = 'a_web/atosday.html'
 
-    sentences = list(doc.sents)
-    for sentence in sentences:
-        sentence_list.append(sentence)
-
-    for token in doc:
-        token_list.append(token)
-        if token.is_stop:
-            stopwords_list.append(token)
-
-        if not token.is_stop:
-            non_stopwords_list.append(token)
-
-        if token.pos_ == "VERB":
-            verbs_list.append(token)
-
-    for chunk in doc.noun_chunks:
-        noun_phrases_list.append(chunk.text)
-
-    # Find named entities, phrases and concepts
-    for entity in doc.ents:
-        entitylist = (entity.text, entity.label_)
-        entity_txt_lbl_list.append(entitylist)
-
+    # # uncomment all lines below <fill in> missing items (command + / (macOS))
+    # # create a list with doc sentences
+    ## HINT: https://spacy.io/usage/spacy-101#lightning-tour-tokens-sentences
+    # sentences = list(doc<fill in>)
+    # for sentence in sentences:
+    #     sentence_list.append(sentence)
+    #
+    # # An individual token — i.e. a word, punctuation symbol, whitespace, etc
+    # # Create for token loop
+    # # HINT:  https://spacy.io/api/token#attributes
+    # for <fill in> in doc:
+    #     token_list.append(token)
+    #     # check if token is stop word
+    #     if token<fill in>:
+    #         stopwords_list.append(token)
+    #     # check if token is non stop word
+    #     if not token<fill in>:
+    #         non_stopwords_list.append(token)
+    #
+    #     #check if token pos is verb
+    # # HINT: https://spacy.io/usage/linguistic-features#pos-tagging
+    #     if token<fill in> == "VERB":
+    #         verbs_list.append(token)
+    #
+    # # append all noun chunks from text to list
+    #
+    # for chunk in doc<fil in>:
+    #     noun_phrases_list.append(chunk.text)
+    #
+    # # append all entity text & labels from  doc to list
+    # for entity in doc<fill in>:
+    #     entitylist = (entity<fill in>, entity.<fill in>)
+    #     entity_txt_lbl_list.append(entitylist)
+    #
+    # # put lists & text in context for template
     context = {
-        'text' : doc,
-        'sentence_list': sentence_list,
-        'token_list': token_list,
-        'stopwords_list': stopwords_list,
-        'nonstopwords_list': non_stopwords_list,
-        'verbs_list': verbs_list,
-        'nounphrases_list': noun_phrases_list,
-        'entity_txt_lbl_list':  entity_txt_lbl_list
+        'text': doc,
+        # uncomment context items  <fill in> missing items (command + /) macOs)
+        # 'sentence_list': <fill in>,
+        # 'token_list': <fill in>,
+        # 'stopwords_list': <fill in>,
+        # 'nonstopwords_list': <fill in>,
+        # 'verbs_list': <fill in>,
+        # 'nounphrases_list': <fill in>,
+        # 'entity_txt_lbl_list':  <fill in>
     }
 
     return render(request, 'a_web/atosday.html', context)
