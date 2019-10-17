@@ -44,8 +44,8 @@ https://spacy.io/
 [DJANGO SERVER](http://127.0.0.1:8000)\
 The Django server is running
 
-12. Open in your code editor the folder 
-`atos_inhouse_day`\
+12. Open in your code editor the folder\ 
+`atos_inhouse_day`
 13. Open `a_web/views.py`  you find missing code, try to complete them.\
 After finishing open the url again: \
 http://127.0.0.1:8000
