@@ -41,7 +41,7 @@ https://spacy.io/
 `python manage.py runserver`
 
 11. Open in your browser:\
-The URL where the Django server is running (127.0.0.1)\
+The URL where the Django server is running (127.0.0.1)
 
 12. Open in your code editor the folder\
 `atos_inhouse_day`
