@@ -71,3 +71,6 @@ def atos_inhouse(request):
     }
 
     return render(request, 'a_web/atosday.html', context)
+
+
+######################

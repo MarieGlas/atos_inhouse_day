@@ -48,3 +48,22 @@ The URL where the Django server is running (127.0.0.1)
 13. Open `a_web/views.py`  you find missing code, try to complete them.\
 After finishing open again: \
 The URL where the Django server is running (127.0.0.1)
+
+
+# Now you got a Django project set up, lets experiment with data and web development
+
+Select a dataset:
+
+1. UFC fights
+
+Try to create your own ML algorithm by creating a classification algorithm. That means you should:
+- Define what you want to predict
+- What variable do you want to use to predict it? 
+- How are you going to evaluate your algorithm
+
+In the views.py there is a section walking you trough the steps After the NLP.
+
+Be creative, ASK QUESTIONS and have fun!
+
+
+
